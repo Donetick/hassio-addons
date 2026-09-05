@@ -1,6 +1,12 @@
 ARG BUILD_FROM
 FROM $BUILD_FROM
 
+LABEL \
+    org.opencontainers.image.title="Home Assistant Add-on: Donetick" \
+    org.opencontainers.image.description="Simplify Tasks & Chores, Together." \
+    org.opencontainers.image.source="https://github.com/donetick/hassio-addons" \
+    org.opencontainers.image.licenses="GNU AFFERO GENERAL PUBLIC LICENSE"
+
 WORKDIR /app
 
 RUN apk --no-cache add gcc musl-dev git sqlite-dev curl jq
